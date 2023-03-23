@@ -53,6 +53,9 @@ a {
   text-decoration: none;
   color: inherit;
 }
+textarea{
+  resize: none;
+}
 button {
   padding: 0;
   border: none;
@@ -117,20 +120,18 @@ header {
   letter-spacing: 0.02em;
   color: var(--title-text-backgroud-color);
   padding: 24px 0;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .nav-list .nav-link:hover,
 .nav-list .nav-link:focus {
   color: var(--color-hover-focus);
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .nav-list .nav-link:active {
   color: var(--color-hover-focus);
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .active,
 .nav-link:hover.current::after {
   color: var(--color-hover-focus);
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .current{
   position: relative;
@@ -162,11 +163,11 @@ address {
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: var(--primary-text-color);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .address-link:hover,
 .address-link:focus {
   color: var(--color-hover-focus);
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 /* Контент сторінки */
 main {
@@ -212,12 +213,13 @@ main {
   margin: 0 auto;
   margin-top: 48px;
   outline: transparent;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+              box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) ;
 }
 .hero-button:hover,
 .hero-button:focus {
   background-color: var(--color-hover-focus);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 /* Секція з рішеннями */
 .section-features {
@@ -325,11 +327,11 @@ main {
   height: 40px;
   justify-content: center;
   align-items: center;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .card-icons-list .social-link-icon:hover,
 .card-icons-list .social-link-icon:focus{
   background-color: var(--color-hover-focus);
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 /* Секція Customers */
 .customers-icon-list{
@@ -350,19 +352,19 @@ main {
   align-items: center;
   justify-content: center;
   outline: transparent;
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .logo-icon{
   color: currentColor;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 } 
 .customers-icon-list .customers-icon:hover,
 .customers-icon-list .customers-icon:focus{
   border: 1px solid var(--color-hover-focus);
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 } 
 .customers-icon:hover .logo-icon,
 .customers-icon:focus .logo-icon{
   fill: var(--color-hover-focus);
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* Підвал сторінки */
@@ -389,11 +391,58 @@ main {
   margin-top: 16px;
 }
 .footer-title{
+  font-weight: 500;
+  font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: var(--accent-color);
   padding-bottom: 16px;
 }
+.footer-form-field{
+  width: 264px;
+  background: #2E2F42;
+  border: 1px solid #FFFFFF;
+  border-radius: 4px;
+  padding: 8px 16px;
+}
+.footer-form-field::placeholder{
+  font-size: 12px;
+  line-height: 2;
+  letter-spacing: 0.04em;
+  color: #FFFFFF;
+}
+.footer-form-label{
+  display: flex;
+  flex-direction: row;
+  gap: 24px;
+}
+.footer-btn{
+  width: 165px;
+  height: 40px;
+  background: #4D5AE5;
+  color: #FFFFFF;
+  border-radius: 4px;
+  padding: 8px 24px;
+  text-align: inherit;
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1),
+              background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+              color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+              box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.footer-btn:hover,
+.footer-btn:focus{
+  background: var(--color-hover-focus);
+  color: var(--accent-color);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+}
+.footer-icon-btn{
+ position: absolute;
+ transform: translate(16px);
+}
+.footer-icons{
+  gap: 16px;
+}
+
 .social-link-icon-footer{
   background-color: var(--primary-text-color);
   border-radius: 50%;
@@ -403,11 +452,11 @@ main {
   justify-content: center;
   align-items: center;
   outline: transparent;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .card-icons-list .social-link-icon-footer:hover,
 .card-icons-list .social-link-icon-footer:focus{
   background-color: #31D0AA;
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 footer {
@@ -436,7 +485,6 @@ footer {
 .modal{
  position: absolute;
  width: 408px;
- height: 576px;
  left: 50%;
  top: 50%;
  transform: translate(-50%, -50%) scale(1);
@@ -444,6 +492,7 @@ footer {
  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 2px 1px rgba(0, 0, 0, 0.2);
  border-radius: 4px;
  transition: 250ms transform linear;
+ padding: 72px 24px 24px 24px;
 }
 .modal-btn{
   position: absolute;
@@ -454,6 +503,122 @@ footer {
   border-radius: 50%;
   background: var(--border-color);
   border: 1px solid rgba(0, 0, 0, 0.1);
+}
+.modal-cta{
+  display: block;
+  font-weight: 500;
+  text-align: center;
+  color: #2E2F42;
+  letter-spacing: 0.02em;
+  margin-bottom: 16px;
+}
+.modal-form-label{
+ display: block;
+ font-size: 12px;
+ margin-bottom: 6px;
+ color: #8E8F99;
+}
+.modal-form-group{
+  position: relative;
+}
+.modal-form-group:not(:last-child){
+  margin-bottom: 10px;
+}
+.modal-form-field{
+  width: 100%;
+  height: 40px;
+  padding: 11px 38px;
+  border-radius: 4px;
+  border: 1px solid rgba(46, 47, 66, 0.4);
+  outline: 1px solid transparent;
+  outline-offset: -1px;
+  transition: outline-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.modal-form-field:focus{
+  outline-color: #4D5AE5;
+}
+.modal-form-icon{
+  position: absolute;
+  top: 50%;
+  left: 16px;
+  transform: translateY(-50%);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1) ;
+}
+.modal-form-field:focus + .modal-form-icon{
+  fill: #4D5AE5;
+}
+.modal-form-message{
+  display: block;
+  width: 100%;
+  height: 120px;
+  padding: 8px 16px;
+  margin-bottom: 16px;
+  font-size: 12px;
+  line-height: 1.16;
+  border-radius: 4px;
+  border: 1px solid rgba(46, 47, 66, 0.4);
+  outline: 1px solid transparent;
+  outline-offset: -1px;
+  transition: outline-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.modal-form-message:focus{
+  outline-color: #4D5AE5;
+}
+.modal-form-message::placeholder{
+  color: #2E2F4266
+}
+.modal-form-agreement{
+  display: flex;
+  gap: 8px;
+}
+.btn-checkbox{
+  display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 8px 24px;
+gap: 16px;
+  width: 169px;
+  margin: 0 auto;
+}
+/* normal */
+.modal-form-checkbox{
+
+}
+/* checked */
+.modal-form-checkbox:checked {
+  width: 16px;
+  height: 16px;
+}
+.modal-form-custom-checkbox{
+  cursor: pointer;
+}
+.checked{
+  fill: #404BBF;
+  opacity: 0;
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.modal-form-checkbox:checked + .modal-form-custom-checkbox> .checked{
+  opacity: 1;
+}
+.uncheked{
+  opacity: 1;
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.modal-form-checkbox:checked + .modal-form-custom-checkbox> .unchecked{
+  opacity: 0;
+}
+.modal-form-agreement-text{
+  font-size: 12px;
+  line-height: 1.16;
+  letter-spacing: 0.04em;
+  color: #8E8F99;
+  margin-bottom: 24px;
+  user-select: none;
+}
+.modal-form-agreement-link{
+  color: #4D5AE5;
+  text-decoration: underline;
 }
 /*Портфоліо */
 .buttons {
@@ -474,13 +639,16 @@ footer {
   padding: 12px 24px;
   border-radius: 4px;
   outline: transparent;
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1),
+              background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+              color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+              box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .button:hover,
 .button:focus {
   background: var(--color-hover-focus);
   color: var(--accent-color);
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .card-set {
   display: flex;
