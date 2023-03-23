@@ -411,7 +411,7 @@ main {
   letter-spacing: 0.04em;
   color: #FFFFFF;
 }
-.footer-form-label{
+.footer-form-group{
   display: flex;
   flex-direction: row;
   gap: 24px;
