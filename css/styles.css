@@ -71,8 +71,8 @@ img {
 }
 
 section {
-  margin-top: 100px;
-  margin-bottom: 120px;
+  padding-top: 120px;
+  padding-bottom: 120px;
 }
 .container {
   width: 1158px;
@@ -222,9 +222,7 @@ main {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
 /* Секція з рішеннями */
-.section-features {
-  padding-top: 0;
-  margin-bottom: 120px;
+.features {
   margin-left: 156px;
   margin-right: 156px;
 }
@@ -260,6 +258,9 @@ main {
   color: var(--primary-text-color);
 }
 /* Секція "Що ми робимо?" */
+.items{
+  padding-top: 0;
+}
 .flex-container {
   display: flex;
   gap: 24px;
@@ -281,8 +282,6 @@ main {
 }
 .team {
   background: var(--secondary-bg-tx-color);
-  height: 732px;
-  padding-top: 120px;
 }
 .card {
   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
